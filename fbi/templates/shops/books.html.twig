@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Arcanium de Thot – Livres enchantés{% endblock %}
+
+{% block body %}
+<div class="max-w-6xl mx-auto mt-12 px-4">
+
+    <h1 class="text-4xl font-bold text-yellow-400 text-center mb-12">
+        Livres – L’Arcanium de Thot
+    </h1>
+
+    <!-- Grille 2 colonnes -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {% set livres = [
+            {'nom': 'Mending', 'img': '/images/6.png'},
+            {'nom': 'Fortune III', 'img': '/images/4.png'},
+            {'nom': 'Protection IV', 'img': '/images/2.png'},
+            {'nom': 'Unbreaking III', 'img': '/images/3.png'},
+            {'nom': 'Silk Touch', 'img': '/images/3.png'},
+            {'nom': 'Sweeping Edge III', 'img': '/images/2.png'},
+        ] %}
+
+        {% for livre in livres %}
+        <section class="bg-gray-800 p-6 rounded-lg shadow-md text-center">
+            <h2 class="text-2xl font-bold text-yellow-300 mb-4">{{ livre.nom }}</h2>
+            <img src="{{ livre.img }}" alt="{{ livre.nom }}" class="mx-auto rounded-lg shadow-lg w-64 h-auto mb-4">
+        </section>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}

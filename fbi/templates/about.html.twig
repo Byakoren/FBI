@@ -1,0 +1,97 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}À propos{% endblock %}
+
+{% block body %}
+<div class="max-w-4xl mx-auto mt-8 space-y-12">
+
+    <!-- Présentation générale -->
+    <h1 class="text-4xl font-bold text-yellow-400 text-center mb-8">À propos de FBI </h1>
+
+            <h2 class="text-3xl font-bold text-yellow-400 mt-12">Nos Dirigeants</h2>
+    
+    <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+            <!-- Fullavatar -->
+            <div class="bg-gray-800 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold text-yellow-300 mb-2">Fullavatar</h2>
+                <p class="text-yellow-100">
+                    Co-dirigeant de FBI, Fullavatar est le maître du design et de la redstone.  
+                    Grâce à lui, les machines prennent vie et les systèmes automatisés fonctionnent à la perfection.
+                </p>
+            </div>
+
+            <!-- Byakoren -->
+            <div class="bg-gray-800 p-6 rounded-lg ">
+                <h2 class="text-2xl font-bold text-yellow-300 mb-2">Byakoren</h2>
+                <p class="text-yellow-100">
+                    L'autre pilier de l'industrie, Byakoren est un farmeur infatigable et un aventurier aguerri.  
+                    Il explore, récolte, et fournit les ressources indispensables à l’empire FBI.
+                </p>
+            </div>
+        </div>
+    
+        <!-- Photo des dirigeants -->
+        <div class="flex justify-center mt-4">
+            <img src="/images/nous.png" alt="Fullavatar et Byakoren" class="rounded shadow-lg max-w-full md:max-w-2xl">
+        </div>
+    </div>
+
+    <!-- Présentation des fermes -->
+    <div class="space-y-8">
+        <h2 class="text-3xl font-bold text-yellow-400 mt-12">Nos Fermes</h2>
+
+        <!-- Ferme à or nether -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-yellow-300 mb-2">Ferme à Or Nether - L'Autel Transdimentionnel</h3>
+            <p class="text-yellow-100 mb-4">
+                Au plus profond du Nether, dans une mer de lave et de ténèbres, se dresse un autel colossal. Sculptée en magma et baignée d’une lumière surnaturelle, cette structure attire à elle les âmes tourmentées des Piglins zombifiés.<br><br>
+                Les portails dimensionnels intégrés à sa tour ne sont pas de simples passages : ce sont des brèches vers un autre plan, des fissures entre les mondes. Chaque créature qui les traverse sacrifie une part de son essence, alimentant un cycle infernal d’énergie brute.<br><br>
+                La légende dit que cet autel aurait été bâti sur un nexus d’anciennes lignes telluriques. Désormais modifié par l'ingénierie redstonienne du FBI, il canalise les forces du Nether dans une boucle sans fin, mécanique et divine.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <img src="/images/goldfarm1.png" alt="Ferme à Or 1" class="rounded shadow-lg w-full">
+                <img src="/images/goldfarm6.png" alt="Ferme à Or 4" class="rounded shadow-lg w-full">
+                <img src="/images/goldfarm2.png" alt="Ferme à Or 2" class="rounded shadow-lg w-full">
+                <img src="/images/goldfarm3.png" alt="Ferme à Or 3" class="rounded shadow-lg w-full">
+            </div>
+
+        <!-- Ferme à or overworld-->
+            <h3 class="text-2xl font-bold text-yellow-300 mb-2 mt-4">Ferme à Or Overworld - L'Ascenseur des Damnés</h3>
+            <p class="text-yellow-100 mb-4">
+                De l’autre côté des portails de l’Autel Transdimensionnel, dans le vide glacé de l’Overworld, s’élève une tour spectrale. C’est ici que les âmes arrachées au Nether sont projetées, expulsées dans un monde qu’elles ne comprennent pas.<br><br>
+
+                Captifs de ce nouvel enfer, les Piglins zombifiés sont aussitôt aspirés dans l’Ascenseur des Damnés : une colonne d’obsidienne et de verre, animée par une mécanique infernale.
+                Lentement, implacablement, ils s’élèvent à travers les couches de l’atmosphère, comme s’ils étaient appelés par les cieux… mais ce n’est qu’une illusion.<br><br>
+
+                À son sommet, un dernier portail les attend. Fissure dimensionnelle inversée, il les renvoie brutalement dans le Nether, précisément à l’endroit où les bras du FBI les accueillent, prêts à récupérer leur dernière offrande : l’or.<br><br>
+
+                Ce cycle cruel, entre deux mondes, est optimisé à la perfection. Il ne laisse aucune échappatoire.
+                Leur voyage n’a qu’un but : servir l’industrie. Servir le rendement. Servir le FBI.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <img src="/images/goldfarm4.png" alt="Ferme à Or 4" class="rounded shadow-lg w-full">
+                <img src="/images/goldfarm5.png" alt="Ferme à Or 4" class="rounded shadow-lg w-full">
+            </div>
+        </div>
+    </div>
+
+    <div class="space-y-8">
+        <!-- Ferme à mobs -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-yellow-300 mb-2">Ferme à Mobs – Le Nexus des Quatre Obélisques</h3>
+            <p class="text-yellow-100 mb-4">
+                Au cœur d’un lac calme, les Quatre Obélisques s’élèvent comme les piliers d’un ancien culte oublié.<br>
+                Leurs sommets dorés captent l'énergie céleste, concentrée au centre dans une sphère sacrée : <strong>l'Œil d’Or</strong>.<br><br>
+                Entouré d’anneaux gravitationnels, ce noyau contient une force mystérieuse attirant les âmes errantes des profondeurs.<br>
+                Il ne s’agit pas seulement d’une ferme à mobs, mais d’un <em>nexus interdimensionnel</em>, un artefact de redstone antique,  
+                conçu pour recycler l’essence des créatures et nourrir les coffres de FBI.<br><br>
+                On dit que la nuit, les obélisques vibrent au rythme de l’Univers, et que leur pouvoir provient d’un fragment de dieu enfermé dans la boule…
+            </p>
+            <img src="/images/mob-jour.png" alt="Ferme à or" class="rounded shadow-md mx-auto mb-4">
+            <img src="/images/mob-nuit.png" alt="Ferme à mobs" class="rounded shadow-md mx-auto">
+        </div>
+    </div>
+</div>
+{% endblock %}

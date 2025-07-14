@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}FBI Industries{% endblock %}</title>
+    
+    <!-- ✅ Police MedievalSharp -->
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+
+    <!-- ✅ Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ✅ Styles globaux -->
+    <style>
+        html, body {
+            min-height: 100vh;
+        }
+
+        body {
+            font-family: 'MedievalSharp', cursive;
+            background: linear-gradient(135deg, #0a0e2a, #1e1b4b);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+
+    {% block stylesheets %}{% endblock %}
+</head>
+<body class="flex flex-col min-h-screen text-yellow-100">
+
+    <header class="sticky top-0 z-50 bg-gray-950 py-4 shadow-md">
+        <div class="max-w-5xl mx-auto flex items-center justify-between px-4">
+            <!-- Logo -->
+            <a href="{{ path('home') }}">
+                <img src="/images/logo-fbi.png" alt="Logo FBI" class="h-12 w-auto">
+            </a>
+
+            <!-- Navigation -->
+            <nav class="space-x-8 text-yellow-200 px-4 text-xl">
+                <a href="{{ path('home') }}" class="hover:text-yellow-400">Accueil</a>
+                <a href="{{ path('about') }}" class="hover:text-yellow-400">À propos</a>
+                <a href="{{ path('shops') }}" class="hover:text-yellow-400">Shops</a>
+                <a href="{{ path('news') }}" class="hover:text-yellow-400">Actualités</a>
+                <a href="{{ path('credits') }}" class="hover:text-yellow-400">Crédits</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="flex-grow max-w-5xl mx-auto p-6">
+        {% block body %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-center text-sm text-yellow-300 py-6">
+        © {{ "now"|date("Y") }} FBI – Minecraft Server
+    </footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Comptoir d'Anubis – Produits{% endblock %}
+
+{% block body %}
+<div class="max-w-6xl mx-auto mt-12 px-4">
+
+    <h1 class="text-4xl font-bold text-yellow-400 text-center mb-12">
+        Produits – Le Comptoir d'Anubis
+    </h1>
+
+    <!-- Lingot seul -->
+    <section class="bg-gray-800 p-6 rounded-lg shadow-md text-center mb-8">
+        <h2 class="text-2xl font-bold text-yellow-300 mb-4">Lingot en Netherite</h2>
+        <img src="/images/netherite.png" alt="Lingot en Netherite" class="mx-auto rounded-lg shadow-lg w-64 h-auto mb-4">
+    </section>
+
+    <!-- Grille 2 colonnes -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {% set produits = [
+            {'nom': 'Bloc d\'Or', 'img': '/images/block-or.png'},
+            {'nom': 'Carotte en Or', 'img': '/images/carrot.png'},
+            {'nom': 'Obsidienne Pleureuse', 'img': '/images/crying_obsidian.png'},
+            {'nom': 'Obsidienne', 'img': '/images/obsidian.png'},
+            {'nom': 'Roche Noire Dorée', 'img': '/images/gilded.png'},
+            {'nom': 'Bloc d\'Os', 'img': '/images/bone.png'},
+            {'nom': 'Bloc de Laine', 'img': '/images/laine.png'},
+            {'nom': 'Backpack en Diamant', 'img': '/images/backpack.png'},
+        ] %}
+
+        {% for produit in produits %}
+        <section class="bg-gray-800 p-6 rounded-lg shadow-md text-center">
+            <h2 class="text-2xl font-bold text-yellow-300 mb-4">{{ produit.nom }}</h2>
+            <img src="{{ produit.img }}" alt="{{ produit.nom }}" class="mx-auto rounded-lg shadow-lg w-64 h-auto mb-4">
+        </section>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}

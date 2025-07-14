@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos Shops{% endblock %}
+
+{% block body %}
+<div class="max-w-5xl mx-auto mt-12 space-y-16">
+
+    <h1 class="text-4xl font-bold text-yellow-400 text-center mb-12">
+        Nos Shops
+    </h1>
+
+
+    <!-- Shop : Comptoir d'Anubis -->
+    <section class="bg-gray-800 p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold text-yellow-300 mb-2">Le Comptoir d'Anubis</h2>
+        <p class="text-yellow-100 mb-4">
+            Depuis les profondeurs du Nether jusqu'aux hauteurs de l’Overworld,  
+            ce comptoir mystique regroupe les ressources les plus précieuses récoltés dans nos fermes sacrées,  
+            bénies par le dieu du passage vers l’au-delà.
+        </p>
+        <img src="/images/shop-resources.png" alt="Shop Ressources sacrées" class="rounded-xl shadow-lg mx-auto w-full max-w-3xl mb-6">
+        <div class="flex justify-center">
+            <a href="{{ path('shop_resources') }}" class="inline-block bg-yellow-400 text-black font-bold px-6 py-3 rounded hover:bg-yellow-300 transition">
+                Voir les produits
+            </a>
+        </div>
+    </section>
+    
+    <!-- Shop : Arcanium de Thot -->
+    <section class="bg-gray-800 p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold text-yellow-300 mb-2">L'Arcanium de Thot</h2>
+        <p class="text-yellow-100 mb-4">
+            Sanctuaire du savoir mystique, l’Arcanium de Thot renferme les secrets des enchantements antiques.  
+            On dit que les livres murmurent à ceux qui savent écouter… Parfait pour transcender vos outils,  
+            vos armes et vos armures au rang de reliques divines.
+        </p>
+        <img src="/images/shop-books.png" alt="Shop Livres enchantés" class="rounded-xl shadow-lg mx-auto w-full max-w-3xl mb-6">
+
+        <div class="flex justify-center">
+            <a href="{{ path('shop_books') }}" class="inline-block bg-yellow-400 text-black font-bold px-6 py-3 rounded hover:bg-yellow-300 transition">
+                Voir les produits
+            </a>
+        </div>
+    </section>
+
+</div>
+{% endblock %}
